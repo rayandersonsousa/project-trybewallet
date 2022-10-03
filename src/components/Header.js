@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     const { email } = this.props;
     return (
-      <div>
+      <header>
         <p data-testid="email-field">
           { email }
         </p>
@@ -16,7 +16,7 @@ class Header extends Component {
         <p data-testid="header-currency-field">
           BRL
         </p>
-      </div>
+      </header>
     );
   }
 }
