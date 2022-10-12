@@ -3,6 +3,7 @@ export const PASSWORD = 'PASSWORD';
 export const GET_CURRENCY = 'GET_CURRENCY';
 export const ADD_EXPENSE = 'ADD_EXPENSE';
 export const FETCH_RATES = 'FETCH_RATES';
+export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
 
 export const emailData = (email) => ({
   type: EMAIL,
@@ -27,6 +28,11 @@ export const addExpense = (expense) => ({
 export const getData = (payload) => ({
   type: FETCH_RATES,
   payload,
+});
+
+export const removeExpense = (expense) => ({
+  type: REMOVE_EXPENSE,
+  payload: expense,
 });
 
 export const fetchCurrencies = () => async (dispatch) => {

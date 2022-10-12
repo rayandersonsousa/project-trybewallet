@@ -12,11 +12,10 @@ class Header extends Component {
         </p>
         <p data-testid="total-field">
           {
-            (expenses.length === 0) ? 0
-              : expenses.reduce((accumulator, expense) => {
-                const money = Number(expense.exchangeRates[expense.currency].ask);
-                return accumulator + Number(expense.value) * money;
-              }, 0).toFixed(2)
+            expenses.reduce((accumulator, expense) => {
+              const money = Number(expense.exchangeRates[expense.currency].ask);
+              return accumulator + Number(expense.value) * money;
+            }, 0).toFixed(2)
           }
         </p>
         <p data-testid="header-currency-field">

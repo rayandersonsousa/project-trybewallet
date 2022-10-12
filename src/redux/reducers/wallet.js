@@ -1,4 +1,4 @@
-import { GET_CURRENCY, FETCH_RATES } from '../actions';
+import { GET_CURRENCY, FETCH_RATES, REMOVE_EXPENSE } from '../actions';
 
 const INITIAL_STATE = {
   currencies: [],
@@ -9,11 +9,11 @@ const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case GET_CURRENCY:
     return { ...state, currencies: action.payload };
-  // case ADD_EXPENSE:
-  //   return {
-  //     ...state,
-  //     expenses: [...state.expenses, ...action.payload],
-  //   };
+  case REMOVE_EXPENSE:
+    return {
+      ...state,
+      expenses: action.payload,
+    };
   case FETCH_RATES:
     return {
       ...state,
