@@ -27,7 +27,7 @@ class Table extends Component {
             <th>Moeda de conversão</th>
             <th>Editar/Excluir</th>
           </thead>
-          <tbody>
+          <tbody data-testid="table-body">
             {expenses.map((expense) => {
               const { currency, id, tag, value,
                 method, description, exchangeRates } = expense;
